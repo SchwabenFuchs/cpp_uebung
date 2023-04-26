@@ -1,0 +1,1 @@
+These are my answers to the exercises in an introductory class for programming in c++.
