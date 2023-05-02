@@ -4,9 +4,10 @@
 using namespace std;
 
 float first_sum(int i){
-    float P = 1;
+    float P = 0;
     for (int j=1; j<=i; j++){
-        P += 1 / (i * j);
+        P += 1 / ((float)i * j);
+        //printf("\nP = %f \nj = %f\ni = %d\ni*j = %f \n", P, j, i, i*j);
     }
     return P;
 }
