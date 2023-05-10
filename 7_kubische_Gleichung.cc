@@ -9,8 +9,12 @@ int main()
 /*computes roots of cubic equation*/
 {
     double a, b, c, d;
-    printf("This program calculates the roots of a 3. order polynomial equation of the form f(x) = a*x^3 + b*x^2 + c*x + d.\nInput the parameters.\na: ");
+    do {
+
+    printf("This program calculates the roots of a 3. order polynomial equation of the form f(x) = a*x^3 + b*x^2 + c*x + d.\nInput the parameters. \na: ");
     cin >> a;
+    }
+    while (a==0);
     cout << "b: ";
     cin >> b;
     cout << "c: ";
@@ -51,14 +55,15 @@ int main()
             printf("x_1 = %f \nVielfachheit = %d \n\nx_2 = %f \nVielfachheit = %d", x_1, x_1_vielfachheit, x_2, x_2_vielfachheit);
         }
     }
-    else if (D < 0){
-        double h = acos(-q/2 * sqrt(-27/pow(p, 3)));
+    else if (D < 0)
+    {
+        double h = acos(-q / 2 * sqrt(-27 / pow(p, 3)));
         x_1_vielfachheit = 1;
-        x_1 = -sqrt(-4*p/3) * cos(h/3 - pi/3) - b/(3*a);
+        x_1 = -sqrt(-4 * p / 3) * cos(h / 3 - pi / 3) - b / (3 * a);
         x_2_vielfachheit = 1;
-        x_2 = -sqrt(-4*p/3) * cos(h/3 + pi/3) - b/(3*a);
+        x_2 = -sqrt(-4 * p / 3) * cos(h / 3 + pi / 3) - b / (3 * a);
         x_3_vielfachheit = 1;
-        x_3 = sqrt(-4*p/3) * cos(h/3) - b/(3*a);
+        x_3 = sqrt(-4 * p / 3) * cos(h / 3) - b / (3 * a);
         printf("x_1 = %f \nVielfachheit = %d \n\nx_2 = %f \nVielfachheit = %d \n\nx_3 = %f \nVielfachheit = %d", x_1, x_1_vielfachheit, x_2, x_2_vielfachheit, x_3, x_3_vielfachheit);
     }
     printf("\n\n");
